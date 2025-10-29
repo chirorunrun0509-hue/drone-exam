@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>二等無人航空機操縦士｜模擬試験</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>二等無人航空機操縦士｜模擬試験</h1>
+    <p class="muted">50問ランダム（重複なし）／採点・全解説・<span class="pill">間違いのみ復習</span>付き</p>
+
+    <!-- 設定 -->
+    <section id="screen-setup" class="card">
+      <div class="row">
+        <button id="startBtn" class="btn">模擬試験を開始</button>
+        <span class="muted">※クリックで出題開始（全パート混在から50問）</span>
+      </div>
+    </section>
+
+    <!-- 問題 -->
+    <section id="screen-quiz" class="card hidden">
+      <div class="row">
+        <div id="progress" class="pill">0 / 50</div>
+        <div id="modeHint" class="pill pill-ghost hidden">復習（間違いのみ）</div>
+      </div>
+      <h2 id="questionText"></h2>
+      <div id="choices"></div>
+      <div class="row mt">
+        <button id="prevBtn" class="btn btn-ghost">戻る</button>
+        <button id="nextBtn" class="btn" disabled>次へ</button>
+      </div>
+    </section>
+
+    <!-- 結果 -->
+    <section id="screen-result" class="card hidden">
+      <h2 id="scoreText">結果</h2>
+      <div class="row mt">
+        <button id="retryBtn" class="btn">もう一度（新しい50問）</button>
+        <button id="reviewWrongBtn" class="btn btn-warn">間違いのみ復習</button>
+        <button id="showExplainBtn" class="btn btn-success">全解説を見る</button>
+      </div>
+      <div id="explainList" class="hidden mt">
+        <h3>解答・解説</h3>
+        <ol id="explainItems" class="expl"></ol>
+      </div>
+    </section>
+
+    <p class="muted small">問題データ：<code>questions_part1.json</code>〜<code>questions_part4.json</code></p>
+  </div>
+
+  <script src="app.js?v=rev7" defer></script>
+</body>
+</html>
