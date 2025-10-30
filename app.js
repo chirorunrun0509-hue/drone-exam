@@ -1,6 +1,6 @@
 // ===== 模擬試験 完全版（インデックス自動判定 + 50問全解説固定表示） =====
 const NUM_QUESTIONS = 50;
-const filesToLoad = ['questions_part1.json','questions_part2.json','questions_part3.json','questions_part4.json'];
+const filesToLoad = ['questions_part1.json','questions_part2.json','questions_part3.json','questions_part4.json','questions_part5.json','questions_part6.json','questions_part7.json'];
 
 const $ = s => document.querySelector(s);
 const scrSetup=$('#screen-setup'), scrQuiz=$('#screen-quiz'), scrResult=$('#screen-result');
